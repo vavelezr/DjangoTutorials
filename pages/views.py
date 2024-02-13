@@ -24,6 +24,9 @@ class AboutPageView(TemplateView):
             "subtitle": "About us",
             "description": "Contact: 3040000",
             "author": "Developed by: Vaneeee",
+            "email": "e-mail: mibebitofiufiu@gmail.com",
+            "address": "Address: Cuenca, España",
+            "phone": "Phone: 302302302",
         })
 
         return context
