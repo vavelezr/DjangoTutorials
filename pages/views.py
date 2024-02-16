@@ -97,10 +97,9 @@ class ProductCreateView(View):
     def post(self, request):
         form = ProductForm(request.POST)
         if form.is_valid():
-            # Add product creation logic here (save data to database, etc.)
-            # For demonstration purposes, we'll simulate product creation:
+
             new_product = {
-                "id": str(len(Product.products) + 1),  # Assuming you have product data storage
+                "id": str(len(Product.products) + 1),  
                 "name": form.cleaned_data["name"],
                 "price": form.cleaned_data["price"],
             }
