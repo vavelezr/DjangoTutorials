@@ -60,8 +60,8 @@ class ProductShowView(View):
     def get(self, request, id):
         try:
             product = Product.products[int(id) - 1]  # Attempt to access the product
-        except (IndexError, ValueError):  # Handle invalid product numbers
-            return redirect('home')  # Redirect to the home page
+        except (IndexError, ValueError):  # Error no existing ID
+            return HttpResponseRedirect('..') # Redirect to the home page
         viewData = {}
         product = Product.products[int(id)-1]
         viewData["title"] = product["name"] + " - Online Store"
